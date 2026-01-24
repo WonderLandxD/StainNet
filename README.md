@@ -1,2 +1,5 @@
 # StainNet
-Foundation models for histology images from immunohistochemistry and special stains.
+
+## Scaling Self-Supervised Foundation Models on Immunohistochemistry and Special Stains and for Computational Pathology
+
+
