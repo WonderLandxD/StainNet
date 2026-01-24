@@ -2,7 +2,7 @@
 
 Scaling Self-Supervised Foundation Models on **Immunohistochemistry (IHC)** and **Special Stains** for Computational Pathology.
 
-[[ArXiv]](https://arxiv.org/abs/2512.10326) [[StainNet-Base]](https://huggingface.co/JWonderLand/StainNet-Base) [[StainNet]](https://huggingface.co/JWonderLand/StainNet)
+[[ArXiv]](https://arxiv.org/abs/2512.10326) [[StainNet-Base]](https://huggingface.co/JWonderLand/StainNet-Base) [[StainNet-Small]](https://huggingface.co/JWonderLand/StainNet)
 
 StainNet is a collection of self-supervised foundation models specifically designed for IHC and special stains in pathology images.
 
@@ -13,7 +13,7 @@ The StainNet models are pre-trained using the DINO [1] self-supervised learning 
 We provide two versions of the model:
 
 *   **[StainNet-Base](https://huggingface.co/JWonderLand/StainNet-Base)**: Based on the Vision Transformer Base/16 (ViT-Base/16) architecture.
-*   **[StainNet](https://huggingface.co/JWonderLand/StainNet)**: Based on the Vision Transformer Small/16 (ViT-Small/16) architecture, which is more lightweight.
+*   **[StainNet-Small](https://huggingface.co/JWonderLand/StainNet)**: Based on the Vision Transformer Small/16 (ViT-Small/16) architecture, which is more lightweight.
 
 ## Quick Start
 
@@ -26,6 +26,9 @@ import torchvision.transforms as transforms
 
 # Load the pretrained model (StainNet-Base)
 model = timm.create_model('hf_hub:JWonderLand/StainNet-Base', pretrained=True)
+
+# Load the pretrained model (StainNet-Small)
+# model = timm.create_model('hf_hub:JWonderLand/StainNet', pretrained=True)
 
 # Image preprocessing
 preprocess = transforms.Compose([
@@ -42,8 +45,8 @@ input_tensor = torch.randn([1, 3, 224, 224]).cuda()
 
 with torch.no_grad():
     output = model(input_tensor)
-    # StainNet-Base (Base) output dimension: [1, 768]
-    # StainNet (Small) output dimension: [1, 384]
+    # StainNet-Base output dimension: [1, 768]
+    # StainNet-Small output dimension: [1, 384]
     print(f"Output shape: {output.shape}")
 ```
 
