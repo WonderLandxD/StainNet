@@ -8,12 +8,12 @@ StainNet is a collection of self-supervised foundation models specifically desig
 
 ## Introduction
 
-The StainNet models are pre-trained using the DINO [1] self-supervised learning method on over 1.4 million patches extracted from 20,231 special staining whole slide images (WSIs) from the [HISTAI](https://arxiv.org/abs/2505.12120) [2] dataset.
+The StainNet models are pre-trained using the DINO [1] self-supervised learning method on over **1.4 million** patches extracted from **20,231 IHC and Special Stain** whole slide images (WSIs) from the [HISTAI](https://arxiv.org/abs/2505.12120) [2] dataset.
 
 We provide two versions of the model:
 
-*   **[StainNet-Base](https://huggingface.co/JWonderLand/StainNet-Base)**: Based on the Vision Transformer Base/16 (ViT-Base/16) architecture.
-*   **[StainNet-Small](https://huggingface.co/JWonderLand/StainNet)**: Based on the Vision Transformer Small/16 (ViT-Small/16) architecture, which is more lightweight.
+*   **[StainNet-Base](https://huggingface.co/JWonderLand/StainNet-Base)**: Based on the Vision Transformer Base/16 (ViT-Base/16, 86M) architecture.
+*   **[StainNet-Small](https://huggingface.co/JWonderLand/StainNet)**: Based on the Vision Transformer Small/16 (ViT-Small/16, 22M) architecture.
 
 ## Quick Start
 
@@ -55,10 +55,10 @@ with torch.no_grad():
 If StainNet is helpful to your research, please cite our work:
 
 ```bibtex
-@misc{li2025stainnet,
-      title={StainNet: A Special Staining Self-Supervised Vision Transformer for Computational Pathology}, 
+@misc{li2026stainnet,
+      title={StainNet: Scaling Self-Supervised Foundation Models on Immunohistochemistry and Special Stains for Computational Pathology}, 
       author={Jiawen Li and Jiali Hu and Xitong Ling and Yongqiang Lv and Yuxuan Chen and Yizhi Wang and Tian Guan and Yifei Liu and Yonghong He},
-      year={2025},
+      year={2026},
       eprint={2512.10326},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
